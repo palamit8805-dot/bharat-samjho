@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bharat Samjho | सही जानकारी, गहरी समझ</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #0b1220;
+  color: white;
+  line-height: 1.6;
+}
+
+/* Navbar */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(11,18,32,0.95);
+  border-bottom: 1px solid #26344d;
+  padding: 15px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+}
+
+.logo span {
+  color: #ff9933;
+}
+
+nav a {
+  color: #ddd;
+  text-decoration: none;
+  margin-left: 18px;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #ff9933;
+}
+
+/* Hero */
+.hero {
+  min-height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+  background:
+    radial-gradient(circle at top, #172744, #0b1220 60%);
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.hero h1 span {
+  color: #ff9933;
+}
+
+.hero h2 {
+  font-size: 22px;
+  color: #ddd;
+  margin-bottom: 18px;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: auto;
+  color: #aeb9ca;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 13px 25px;
+  background: #ff9933;
+  color: #111;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #ffb45e;
+}
+
+/* Sections */
+section {
+  padding: 70px 6%;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 35px;
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #121d31;
+  padding: 25px;
+  border-radius: 14px;
+  border: 1px solid #26344d;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: #ff9933;
+}
+
+.card .icon {
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  margin-bottom: 8px;
+}
+
+.card p {
+  color: #aeb9ca;
+  font-size: 14px;
+}
+
+/* About */
+.about {
+  background: #0e1728;
+  text-align: center;
+}
+
+.about p {
+  max-width: 750px;
+  margin: auto;
+  color: #b9c3d3;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 25px;
+  border-top: 1px solid #26344d;
+  color: #8895aa;
+  font-size: 14px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .hero h2 {
+    font-size: 18px;
+  }
+
+  nav {
+    padding: 14px 4%;
+  }
+
+  nav a {
+    margin-left: 8px;
+    font-size: 12px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">🇮🇳 Bharat <span>Samjho</span></div>
+
+  <div>
+    <a href="#">Home</a>
+    <a href="#features">Features</a>
+    <a href="#about">About</a>
+  </div>
+</nav>
+
+<section class="hero">
+
+  <div>
+    <h1>Bharat <span>Samjho</span> 🇮🇳</h1>
+
+    <h2>सही जानकारी • गहरी समझ • बेहतर कल</h2>
+
+    <p>
+      भारत और दुनिया से जुड़ी महत्वपूर्ण जानकारी,
+      Current Affairs, Fact Check, Government Schemes
+      और Knowledge को आसान हिंदी में समझें।
+    </p>
+
+    <a class="btn" href="#features">Explore Now →</a>
+  </div>
+
+</section>
+
+<section id="features">
+
+  <h2 class="section-title">हम क्या लाते हैं?</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="icon">📰</div>
+      <h3>Current Affairs</h3>
+      <p>
+        देश और दुनिया की महत्वपूर्ण घटनाओं को आसान भाषा में समझें।
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🔎</div>
+      <h3>Fact Check</h3>
+      <p>
+        वायरल दावों और खबरों की सच्चाई को समझने की कोशिश करें।
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🏛️</div>
+      <h3>Government Schemes</h3>
+      <p>
+        सरकारी योजनाओं और उनके नियमों की जानकारी आसान हिंदी में।
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🌍</div>
+      <h3>International</h3>
+      <p>
+        दुनिया में क्या हो रहा है और उसका भारत पर क्या असर है।
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">💡</div>
+      <h3>Knowledge Hub</h3>
+      <p>
+        विज्ञान, इतिहास, तकनीक और सामान्य ज्ञान से जुड़ी रोचक बातें।
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="about" class="about">
+
+  <h2 class="section-title">Bharat Samjho के बारे में</h2>
+
+  <p>
+    हमारा उद्देश्य जटिल जानकारी को सरल और समझने योग्य भाषा में
+    प्रस्तुत करना है, ताकि हर व्यक्ति किसी विषय को बेहतर तरीके से
+    समझ सके।
+  </p>
+
+</section>
+
+<footer>
+  © 2026 Bharat Samjho | जानकारी ही ताकत है 🇮🇳
+</footer>
+
+</body>
+</html>
