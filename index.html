@@ -5,7 +5,46 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Bharat Samjho | News, Knowledge & Fact Check</title>
+.search-box {
+  max-width: 700px;
+  margin: 25px auto;
+  display: flex;
+  gap: 10px;
+  padding: 0 20px;
+}
 
+.search-box input {
+  flex: 1;
+  padding: 14px 18px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-box button {
+  padding: 14px 22px;
+  border: none;
+  border-radius: 10px;
+  background: #0b3d91;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.search-box button:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+  .search-box {
+    flex-direction: column;
+  }
+
+  .search-box button {
+    width: 100%;
+  }
+}
 <style>
 *{
   margin:0;
@@ -251,7 +290,10 @@ footer strong{
   </nav>
 
 </header>
-
+<div class="search-box">
+  <input type="text" placeholder="🔍 खबर, विषय या जानकारी खोजें...">
+  <button>Search</button>
+</div>
 
 <!-- HERO -->
 
