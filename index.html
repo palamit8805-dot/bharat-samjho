@@ -1,4 +1,4 @@
-is<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
@@ -331,6 +331,7 @@ searchButton.addEventListener("click", function() {
   searchResults.innerHTML = results.map(page => `
     <div class="search-result">
       <h3>${page.title}</h3>
+      <p>${page.description}</p>
       <a href="${page.link}">Article पढ़ें →</a>
     </div>
   `).join("");
