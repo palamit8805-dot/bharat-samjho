@@ -270,6 +270,67 @@ footer strong{
     font-size:24px;
   }
 }
+ <script>
+const searchInput = document.getElementById("searchInput");
+const searchButton = document.querySelector(".search-box button");
+const searchResults = document.getElementById("searchResults");
+
+const pages = [
+  {
+    title: "भारत से जुड़ी महत्वपूर्ण जानकारी",
+    keywords: "india भारत देश इंडिया",
+    link: "india-article.html"
+  },
+  {
+    title: "दुनिया की घटनाओं को समझना",
+    keywords: "world दुनिया विदेश international अंतरराष्ट्रीय",
+    link: "world-article.html"
+  },
+  {
+    title: "Fact Check और वायरल खबरों की जांच",
+    keywords: "fact check फैक्ट चेक वायरल खबर fake सच झूठ",
+    link: "fact-check.html"
+  },
+  {
+    title: "Government Schemes की जानकारी",
+    keywords: "scheme schemes सरकारी योजना government योजना",
+    link: "schemes.html"
+  },
+  {
+    title: "Knowledge और सामान्य जानकारी",
+    keywords: "knowledge ज्ञान जानकारी सीखना education",
+    link: "knowledge.html"
+  }
+];
+
+searchButton.addEventListener("click", function() {
+  const query = searchInput.value.toLowerCase().trim();
+
+  if (query === "") {
+    searchResults.innerHTML = "<p>कृपया कुछ खोजें।</p>";
+    return;
+  }
+
+  const results = pages.filter(page =>
+    (page.title + " " + page.keywords)
+      .toLowerCase()
+      .includes(query)
+  );
+
+  if (results.length === 0) {
+    searchResults.innerHTML =
+      "<p>कोई matching result नहीं मिला।</p>";
+    return;
+  }
+
+  searchResults.innerHTML = results.map(page => `
+    <div class="search-result">
+      <h3>${page.title}</h3>
+      <a href="${page.link}">Article पढ़ें →</a>
+    </div>
+  `).join("");
+});
+</script>       
 </style>
 </head>
 
