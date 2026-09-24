@@ -51,21 +51,6 @@ is<!DOCTYPE html>
   padding:0;
   box-sizing:border-box;
 }
-<script>
-const searchInput = document.getElementById("searchInput");
-const searchButton = document.querySelector(".search-box button");
-
-searchButton.addEventListener("click", function() {
-  const query = searchInput.value.toLowerCase().trim();
-
-  if (query === "") {
-    alert("कृपया कुछ खोजें");
-    return;
-  }
-
-  alert("आपने खोजा: " + query);
-});
-</script>
 body{
   font-family:Arial,sans-serif;
   background:#f5f7fa;
@@ -607,6 +592,20 @@ footer strong{
   © 2026 Bharat Samjho
 
 </footer>
+<script>
+const searchInput = document.getElementById("searchInput");
+const searchButton = document.querySelector(".search-box button");
 
+searchButton.addEventListener("click", function() {
+  const query = searchInput.value.toLowerCase().trim();
+
+  if (query === "") {
+    alert("कृपया कुछ खोजें");
+    return;
+  }
+
+  alert("आपने खोजा: " + query);
+});
+</script>
 </body>
 </html>
