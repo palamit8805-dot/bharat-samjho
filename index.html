@@ -651,7 +651,8 @@ searchButton.addEventListener("click", function() {
   searchResults.innerHTML = results.map(page => `
     <div class="search-result">
       <h3>${page.title}</h3>
-      <a href="${page.link}">Article पढ़ें →</a>
+      <a<p>${page.description}</p>
+      href="${page.link}">Article पढ़ें →</a>
     </div>
   `).join("");
 });
