@@ -271,73 +271,7 @@ footer strong{
   }
 }
  </style>
-<script>
-const searchInput = document.getElementById("searchInput");
-const searchButton = document.querySelector(".search-box button");
-const searchResults = document.getElementById("searchResults");
-
-const pages = [
-{
-  title: "भारत से जुड़ी महत्वपूर्ण जानकारी",
-  description: "भारत से जुड़े महत्वपूर्ण विषय, जानकारी और देश की विविधता को समझें।",
-  keywords: "india भारत देश इंडिया",
-  link: "india-article.html"
-},
-  {
-  title: "दुनिया की घटनाओं को समझना",
-  description: "दुनिया में होने वाली महत्वपूर्ण घटनाओं और अंतरराष्ट्रीय विषयों को समझें।",
-  keywords: "world दुनिया विदेश international अंतरराष्ट्रीय",
-  link: "world-article.html"
-},
-  {
-  title: "Fact Check और वायरल खबरों की जांच",
-  description: "वायरल खबरों और दावों की सच्चाई जांचने के आसान तरीके जानें।",
-  keywords: "fact check फैक्ट चेक वायरल खबर fake सच झूठ",
-  link: "fact-check.html"
-},
-  {
-  title: "Government Schemes की जानकारी",
-  description: "सरकारी योजनाओं की जानकारी, पात्रता और जरूरी बातों को समझें।",
-  keywords: "scheme schemes सरकारी योजना government योजना",
-  link: "schemes.html"
-},
-  {
-  title: "Knowledge और सामान्य जानकारी",
-  description: "ज्ञान, सामान्य जानकारी और नई चीजें सीखने से जुड़े उपयोगी विषय पढ़ें।",
-  keywords: "knowledge ज्ञान जानकारी सीखना education",
-  link: "knowledge.html"
-},
-];
-
-searchButton.addEventListener("click", function() {
-  const query = searchInput.value.toLowerCase().trim();
-
-  if (query === "") {
-    searchResults.innerHTML = "<p>कृपया कुछ खोजें।</p>";
-    return;
-  }
-
-  const results = pages.filter(page =>
-    (page.title + " " + page.keywords)
-      .toLowerCase()
-      .includes(query)
-  );
-
-  if (results.length === 0) {
-    searchResults.innerHTML =
-      "<p>कोई matching result नहीं मिला।</p>";
-    return;
-  }
-
-  searchResults.innerHTML = results.map(page => `
-    <div class="search-result">
-      <h3>${page.title}</h3>
-      <p>${page.description}</p>
-      <a href="${page.link}">Article पढ़ें →</a>
-    </div>
-  `).join("");
-});
-</script>       
+        
 </head>
 
 <body>
@@ -727,5 +661,72 @@ searchButton.addEventListener("click", function() {
   }
 });       
 </script>      
+<script>
+const searchInput = document.getElementById("searchInput");
+const searchButton = document.querySelector(".search-box button");
+const searchResults = document.getElementById("searchResults");
+
+const pages = [
+{
+  title: "भारत से जुड़ी महत्वपूर्ण जानकारी",
+  description: "भारत से जुड़े महत्वपूर्ण विषय, जानकारी और देश की विविधता को समझें।",
+  keywords: "india भारत देश इंडिया",
+  link: "india-article.html"
+},
+  {
+  title: "दुनिया की घटनाओं को समझना",
+  description: "दुनिया में होने वाली महत्वपूर्ण घटनाओं और अंतरराष्ट्रीय विषयों को समझें।",
+  keywords: "world दुनिया विदेश international अंतरराष्ट्रीय",
+  link: "world-article.html"
+},
+  {
+  title: "Fact Check और वायरल खबरों की जांच",
+  description: "वायरल खबरों और दावों की सच्चाई जांचने के आसान तरीके जानें।",
+  keywords: "fact check फैक्ट चेक वायरल खबर fake सच झूठ",
+  link: "fact-check.html"
+},
+  {
+  title: "Government Schemes की जानकारी",
+  description: "सरकारी योजनाओं की जानकारी, पात्रता और जरूरी बातों को समझें।",
+  keywords: "scheme schemes सरकारी योजना government योजना",
+  link: "schemes.html"
+},
+  {
+  title: "Knowledge और सामान्य जानकारी",
+  description: "ज्ञान, सामान्य जानकारी और नई चीजें सीखने से जुड़े उपयोगी विषय पढ़ें।",
+  keywords: "knowledge ज्ञान जानकारी सीखना education",
+  link: "knowledge.html"
+},
+];
+
+searchButton.addEventListener("click", function() {
+  const query = searchInput.value.toLowerCase().trim();
+
+  if (query === "") {
+    searchResults.innerHTML = "<p>कृपया कुछ खोजें।</p>";
+    return;
+  }
+
+  const results = pages.filter(page =>
+    (page.title + " " + page.keywords)
+      .toLowerCase()
+      .includes(query)
+  );
+
+  if (results.length === 0) {
+    searchResults.innerHTML =
+      "<p>कोई matching result नहीं मिला।</p>";
+    return;
+  }
+
+  searchResults.innerHTML = results.map(page => `
+    <div class="search-result">
+      <h3>${page.title}</h3>
+      <p>${page.description}</p>
+      <a href="${page.link}">Article पढ़ें →</a>
+    </div>
+  `).join("");
+});
+</script>       
 </body>
 </html>
