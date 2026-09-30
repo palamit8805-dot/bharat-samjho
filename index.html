@@ -188,23 +188,13 @@ section{
 .breaking-links a:hover{
   color:#ff9933;
 }
-  
-      .ticker-track{
-  display:flex;
-  gap:30px;
-  white-space:nowrap;
-  width:max-content;
-  animation:tickerMove 20s linear infinite;
-}   
 
-@keyframes tickerMove{
-  from{
-    transform:translateX(100%);
-  }
-  to{
-    transform:translateX(-100%);
-  }
+.ticker-track{
+  display:flex;
+  gap:20px;
+  white-space:nowrap;
 }      
+     
 @media(max-width:600px){
   .breaking-news{
     padding:10px 15px;
