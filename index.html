@@ -190,7 +190,18 @@ section{
 .breaking-links a:hover{
   color:#ff9933;
 }
-        
+  .breaking-links{
+  animation: tickerMove 18s linear infinite;
+}
+
+@keyframes tickerMove{
+  from{
+    transform:translateX(100%);
+  }
+  to{
+    transform:translateX(-100%);
+  }
+}      
 @media(max-width:600px){
   .breaking-news{
     padding:10px 15px;
