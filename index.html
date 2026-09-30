@@ -191,9 +191,13 @@ section{
 .breaking-links a:hover{
   color:#ff9933;
 }
-  .breaking-links{
-  animation: tickerMove 18s linear infinite;
-}
+  
+     .ticker-track{
+  display:flex;
+  gap:30px;
+  white-space:nowrap;
+  animation:tickerMove 20s linear infinite;
+}     
 
 @keyframes tickerMove{
   from{
@@ -440,7 +444,9 @@ footer strong{
 
   <div class="breaking-links">
 
-    <a href="india-article.html">
+    <div class="ticker-track">
+            
+     <a href="india-article.html">
       🇮🇳 Asian Games 2026 में भारत का शानदार प्रदर्शन
     </a>
 
