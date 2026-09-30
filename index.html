@@ -169,7 +169,28 @@ section{
 .breaking-news span{
   color:#e5eaf2;
 }
+.breaking-links{
+  display:flex;
+  gap:20px;
+  overflow-x:auto;
+  white-space:nowrap;
+  scrollbar-width:none;
+}
 
+.breaking-links::-webkit-scrollbar{
+  display:none;
+}
+
+.breaking-links a{
+  color:#e5eaf2;
+  text-decoration:none;
+  font-weight:500;
+}
+
+.breaking-links a:hover{
+  color:#ff9933;
+}
+        
 @media(max-width:600px){
   .breaking-news{
     padding:10px 15px;
@@ -402,8 +423,25 @@ footer strong{
 <!-- NEWS -->
 
 <div class="breaking-news">
+
   <strong>🔴 LATEST</strong>
-  <span>भारत और दुनिया की महत्वपूर्ण खबरें आसान भाषा में पढ़ें</span>
+
+  <div class="breaking-links">
+
+    <a href="india-article.html">
+      🇮🇳 Asian Games 2026 में भारत का शानदार प्रदर्शन
+    </a>
+
+    <a href="world-article.html">
+      🌍 दुनिया में AI को लेकर नई वैश्विक चर्चा
+    </a>
+
+    <a href="schemes.html">
+      🏛️ सरकारी योजनाओं की सही जानकारी
+    </a>
+
+  </div>
+
 </div>
 
 <section id="news">
